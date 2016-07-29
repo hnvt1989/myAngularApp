@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Signup Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" required [(ngModel)]="model.firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" required [(ngModel)]="model.lastName">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" required [(ngModel)]="model.email">
+        </div>
+        <div class="form-group">
+            <label for="countryr">Country</label>
+            <select class="form-control" required [(ngModel)]="model.country">
+            >
+                <option *ngFor="let c of countries" [value]="c">{{c}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
